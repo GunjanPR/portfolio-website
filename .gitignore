@@ -3,3 +3,7 @@ Thumbs.db
 node_modules/
 dist/
 .env
+
+# Local source and QA artifacts
+.tmp-*/
+GR_AI_ML_Master_Complete_v2.docx

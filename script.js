@@ -8,19 +8,15 @@ const year = document.querySelector("#year");
 const email = "gunjanpr@udel.edu";
 
 const storedTheme = localStorage.getItem("portfolio-theme");
-const preferredTheme = window.matchMedia("(prefers-color-scheme: light)").matches
-  ? "light"
-  : "dark";
-
+const preferredTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
 root.dataset.theme = storedTheme || preferredTheme;
 
 function refreshIcons() {
-  if (window.lucide) {
-    window.lucide.createIcons();
-  }
+  if (window.lucide) window.lucide.createIcons();
 }
 
 function updateThemeControl() {
+  if (!themeToggle) return;
   const isDark = root.dataset.theme === "dark";
   themeToggle.innerHTML = `<i data-lucide="${isDark ? "sun" : "moon"}" aria-hidden="true"></i>`;
   themeToggle.setAttribute("aria-label", `Switch to ${isDark ? "light" : "dark"} theme`);
@@ -28,6 +24,7 @@ function updateThemeControl() {
 }
 
 function closeMenu() {
+  if (!header || !menuToggle) return;
   header.classList.remove("menu-open");
   menuToggle.setAttribute("aria-expanded", "false");
   menuToggle.setAttribute("aria-label", "Open navigation");
@@ -50,59 +47,42 @@ menuToggle?.addEventListener("click", () => {
   refreshIcons();
 });
 
-mobileNav?.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", closeMenu);
-});
+mobileNav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
 
-window.addEventListener(
-  "scroll",
-  () => header?.classList.toggle("is-scrolled", window.scrollY > 18),
-  { passive: true },
-);
+window.addEventListener("scroll", () => header?.classList.toggle("is-scrolled", window.scrollY > 18), { passive: true });
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      revealObserver.unobserve(entry.target);
     });
   },
-  { threshold: 0.12 },
+  { threshold: 0.1 },
 );
 
 document.querySelectorAll(".reveal").forEach((element, index) => {
-  if (element.closest(".hero")) {
-    element.style.transitionDelay = `${Math.min(index * 70, 280)}ms`;
-  }
+  if (element.closest(".hero")) element.style.transitionDelay = `${Math.min(index * 70, 280)}ms`;
   revealObserver.observe(element);
 });
 
 const navLinks = [...document.querySelectorAll('.desktop-nav a[href^="#"]')];
-const navSections = navLinks
-  .map((link) => document.querySelector(link.getAttribute("href")))
-  .filter(Boolean);
-
+const navSections = navLinks.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
 const navObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      navLinks.forEach((link) => {
-        link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
-      });
+      navLinks.forEach((link) => link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`));
     });
   },
   { rootMargin: "-35% 0px -55%", threshold: 0 },
 );
-
 navSections.forEach((section) => navObserver.observe(section));
 
 copyEmailButton?.addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(email);
-    const label = copyEmailButton.querySelector("span");
-    label.textContent = "Email copied";
     copyEmailButton.innerHTML = '<i data-lucide="check" aria-hidden="true"></i><span>Email copied</span>';
     refreshIcons();
     window.setTimeout(() => {
@@ -114,9 +94,6 @@ copyEmailButton?.addEventListener("click", async () => {
   }
 });
 
-if (year) {
-  year.textContent = new Date().getFullYear();
-}
-
+if (year) year.textContent = new Date().getFullYear();
 updateThemeControl();
 refreshIcons();
