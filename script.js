@@ -5,7 +5,7 @@ const menuToggle = document.querySelector("[data-menu-toggle]");
 const mobileNav = document.querySelector("[data-mobile-nav]");
 const copyEmailButton = document.querySelector("[data-copy-email]");
 const year = document.querySelector("#year");
-const email = "gunjanpr@udel.edu";
+const email = "gunjanrajgureinusa@gmail.com";
 
 const storedTheme = localStorage.getItem("portfolio-theme");
 const preferredTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
