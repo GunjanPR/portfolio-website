@@ -3,18 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0a0b0a" />
+    <meta name="theme-color" content="#080b0a" />
     <meta
       name="description"
-      content="Gunjan Rajgure is an AI systems engineer researching distributed inference, evaluation-first agents, and safety-critical AI workflows."
+      content="Gunjan Rajgure is an AI/ML engineer and biomedical researcher building deployed evidence systems, multimodal research pipelines, and measurable production AI."
     />
-    <meta property="og:title" content="Gunjan Rajgure | AI Systems Engineer" />
+    <meta property="og:title" content="Gunjan Rajgure | AI/ML Engineer" />
     <meta
       property="og:description"
-      content="AI systems engineered for the part after the demo: latency, reliability, evaluation, and control."
+      content="Deployed biomedical AI, multimodal research, LLM infrastructure, and production engineering with measurable outcomes."
     />
-    <meta property="og:image" content="assets/systems-landscape.png" />
-    <title>Gunjan Rajgure | AI Systems Engineer</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gunjanpr.github.io/portfolio-website/" />
+    <meta property="og:image" content="https://gunjanpr.github.io/portfolio-website/assets/og-resume-portfolio.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gunjan Rajgure | AI/ML Engineer" />
+    <meta name="twitter:description" content="LLM systems, multimodal biomedical AI, and rigorous data science." />
+    <meta name="twitter:image" content="https://gunjanpr.github.io/portfolio-website/assets/og-resume-portfolio.png" />
+    <title>Gunjan Rajgure | AI/ML Engineer &amp; Biomedical Researcher</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,22 +35,23 @@
 
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Gunjan Rajgure, back to top">
-        <span class="brand-mark">G</span>
+        <span class="brand-mark">GR</span>
         <span class="brand-copy">
           <strong>Gunjan Rajgure</strong>
-          <small>AI Systems Engineer</small>
+          <small>AI/ML engineer</small>
         </span>
       </a>
 
       <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="#approach">Approach</a>
+        <a href="#experience">Experience</a>
+        <a href="#research">Deployed work</a>
+        <a href="#systems">Systems</a>
         <a href="#about">About</a>
       </nav>
 
       <div class="header-actions">
-        <a class="text-link header-contact" href="mailto:gunjanpr@udel.edu">
-          Let's talk <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+        <a class="resume-link" href="assets/Gunjan-Rajgure-Resume.pdf" target="_blank">
+          Resume <i data-lucide="arrow-up-right" aria-hidden="true"></i>
         </a>
         <button class="icon-button" type="button" data-theme-toggle aria-label="Switch to light theme" title="Change color theme">
           <i data-lucide="sun" aria-hidden="true"></i>
@@ -54,302 +62,387 @@
       </div>
 
       <nav class="mobile-nav" data-mobile-nav aria-label="Mobile navigation">
-        <a href="#work">Work</a>
-        <a href="#approach">Approach</a>
+        <a href="#experience">Experience</a>
+        <a href="#research">Deployed work</a>
+        <a href="#systems">Systems</a>
         <a href="#about">About</a>
-        <a href="https://github.com/gunjanpr" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="mailto:gunjanpr@udel.edu">Contact</a>
+        <a href="assets/Gunjan-Rajgure-Resume.pdf" target="_blank">Resume</a>
       </nav>
     </header>
 
     <main id="main-content">
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero-image" aria-hidden="true"></div>
-        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-grid" aria-hidden="true"></div>
 
         <div class="hero-content">
           <div class="availability reveal">
             <span class="status-dot" aria-hidden="true"></span>
-            Open to AI systems opportunities
+            Open to AI/ML engineering and research roles
           </div>
-          <p class="hero-role reveal">AI systems engineering / applied research</p>
+          <p class="hero-kicker reveal">Deployed biomedical AI / LLM infrastructure / multimodal research</p>
           <h1 id="hero-title" class="reveal">Gunjan<br /><span>Rajgure.</span></h1>
-          <p class="hero-summary reveal">
-            <strong>I build AI systems that earn trust.</strong>
-            I work where capable models meet real operating constraints: latency,
-            cost, observability, permissions, and human oversight.
+          <p class="hero-thesis reveal">
+            <strong>I turn model capability into measurable systems.</strong>
+            AI/ML engineer and biomedical researcher connecting rigorous evaluation,
+            scalable software, and evidence-grounded products used by real researchers.
           </p>
           <div class="hero-actions reveal">
-            <a class="button button-primary" href="#work">
-              Explore selected work <i data-lucide="arrow-down-right" aria-hidden="true"></i>
+            <a class="button button-primary" href="#research">
+              Explore deployed research <i data-lucide="arrow-down-right" aria-hidden="true"></i>
             </a>
-            <a class="button button-ghost" href="mailto:gunjanpr@udel.edu">
-              <i data-lucide="mail" aria-hidden="true"></i> gunjanpr@udel.edu
+            <a class="button button-ghost" href="assets/Gunjan-Rajgure-Resume.pdf" target="_blank">
+              <i data-lucide="file-text" aria-hidden="true"></i> View resume
             </a>
           </div>
         </div>
 
-        <div class="hero-index reveal" aria-label="Current research areas">
-          <p>Current research</p>
-          <ol>
-            <li><span>01</span> Distributed inference</li>
-            <li><span>02</span> Evaluation-first agents</li>
-            <li><span>03</span> Safety-critical workflows</li>
-          </ol>
+        <div class="hero-profile reveal">
+          <p>Currently</p>
+          <strong>Research Assistant</strong>
+          <span>University of Delaware</span>
+          <i></i>
+          <strong>M.S. Bioinformatics &amp; Data Science</strong>
+          <span>Completed May 2026</span>
         </div>
 
-        <a class="scroll-cue" href="#signal" aria-label="Scroll to introduction">
-          <span>Scroll to inspect</span>
+        <a class="scroll-cue" href="#proof" aria-label="Scroll to key results">
+          <span>Explore the evidence</span>
           <i data-lucide="arrow-down" aria-hidden="true"></i>
         </a>
       </section>
 
-      <section class="signal-strip" id="signal" aria-label="Core engineering focus">
-        <p><span>01</span> Distributed systems</p>
-        <p><span>02</span> Agent reliability</p>
-        <p><span>03</span> Safety by design</p>
-        <p><span>04</span> Measurable outcomes</p>
+      <section class="proof-strip" id="proof" aria-label="Selected measured outcomes">
+        <article>
+          <span class="proof-value">Live</span>
+          <p>biomedical evidence portal</p>
+        </article>
+        <article>
+          <span class="proof-value">~0.94</span>
+          <p>eMIND relation precision</p>
+        </article>
+        <article>
+          <span class="proof-value" data-count="69003">69,003</span>
+          <p>clinical cases indexed</p>
+        </article>
+        <article>
+          <span class="proof-value">2.4x</span>
+          <p>LLM serving throughput</p>
+        </article>
       </section>
 
-      <section class="statement section-shell reveal" aria-labelledby="statement-title">
-        <p class="section-label">The premise</p>
-        <div class="statement-copy">
-          <h2 id="statement-title">The demo is the beginning.<br /><span>Production is the test.</span></h2>
+      <section class="intro section-shell reveal" aria-labelledby="intro-title">
+        <p class="section-label">The throughline</p>
+        <div>
+          <h2 id="intro-title">Research depth.<br />Engineering discipline.</h2>
           <p>
-            A useful AI system is more than a model response. It is a complete loop:
-            route intelligently, retrieve evidence, bound actions, observe behavior,
-            and know when to ask a human. That is the loop I am learning to engineer.
+            Three years in enterprise systems taught me to ship maintainable software,
+            lead teams, and translate ambiguous requirements. Graduate research added
+            multimodal learning, biomedical NLP, GPU inference, and scientific rigor.
+            The result is work that can be deployed, inspected, measured, and trusted.
           </p>
         </div>
       </section>
 
-      <section class="work-section" id="work" aria-labelledby="work-title">
-        <div class="section-shell section-intro reveal">
-          <div>
-            <p class="section-label">Selected work / 2026</p>
-            <h2 id="work-title">Three systems.<br />One standard.</h2>
+      <section class="experience-section" id="experience" aria-labelledby="experience-title">
+        <div class="section-shell section-heading reveal">
+          <p class="section-label">Experience / 2021 - present</p>
+          <h2 id="experience-title">Built in production.<br />Sharpened in research.</h2>
+        </div>
+
+        <div class="timeline section-shell">
+          <article class="role reveal">
+            <div class="role-meta">
+              <span>May 2025 - Present</span>
+              <span>Newark, Delaware</span>
+            </div>
+            <div class="role-main">
+              <p class="role-index">02</p>
+              <div>
+                <h3>Research Assistant</h3>
+                <p class="role-company">University of Delaware</p>
+                <p class="role-summary">
+                  Building multimodal representation-learning and biomedical NLP systems
+                  that connect clinical narratives, medical images, ontologies, and literature evidence.
+                </p>
+                <ul>
+                  <li>Architected PhenoZebra across 69,003 cases, 1,727 rare diseases, and 37 medical departments.</li>
+                  <li>Optimized A100 80GB inference with bfloat16, batching, reusable caches, and checkpoint recovery.</li>
+                  <li>Scaled eMIND into an evidence-linked variant-impact workflow and deployed search portal at approximately 0.94 precision and 0.84 recall.</li>
+                  <li>Built reproducible JSONL and PMC pipelines with normalization, deduplication, routing, and monitoring.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="role reveal">
+            <div class="role-meta">
+              <span>July 2021 - July 2024</span>
+              <span>Pune, India</span>
+            </div>
+            <div class="role-main">
+              <p class="role-index">01</p>
+              <div>
+                <h3>Systems Engineer</h3>
+                <p class="role-company">Tata Consultancy Services</p>
+                <p class="role-summary">
+                  Delivered NLP, machine-learning, automation, API, and full-stack systems
+                  for enterprise clients while leading cross-functional engineering work.
+                </p>
+                <ul>
+                  <li>Led an eight-member team delivering NLP classification across 100,000+ records at 95% accuracy.</li>
+                  <li>Designed and maintained enterprise applications and 50+ REST APIs secured with Keycloak.</li>
+                  <li>Automated model evaluation and reporting in Python, reducing manual effort by 60%.</li>
+                  <li>Translated client requirements into technical designs, documented releases, and production support.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="research-section" id="research" aria-labelledby="research-title">
+        <div class="section-shell section-heading reveal">
+          <p class="section-label">Deployed &amp; presented research</p>
+          <h2 id="research-title">Research you can inspect.</h2>
+          <p class="heading-copy">
+            Two biomedical AI systems built around the same principle: model outputs become
+            more useful when people can trace them back to evidence, assumptions, and measurable behavior.
+          </p>
+        </div>
+
+        <article class="research-feature section-shell reveal">
+          <a class="poster-frame emind-frame" href="https://research.bioinformatics.udel.edu/emind/" target="_blank" rel="noreferrer" aria-label="Launch the live eMIND Visuals application">
+            <img
+              src="assets/emind-live.webp"
+              alt="eMIND Visuals showing PMID 26079414 with highlighted ABCA1, N1800H, Alzheimer's disease, and variant-impact evidence"
+            />
+            <span>Launch live application <i data-lucide="external-link" aria-hidden="true"></i></span>
+          </a>
+
+          <div class="research-details">
+            <div class="project-heading">
+              <span class="live-badge"><i aria-hidden="true"></i> Live deployment</span>
+              <p>ISMB 2026 / Washington, DC</p>
+            </div>
+            <h3 class="project-title">eMIND Visuals</h3>
+            <div class="research-statement">
+              <span>Product outcome</span>
+              <p>Turn dense Alzheimer&apos;s disease literature into searchable, evidence-linked genetic variant impact records.</p>
+            </div>
+            <div class="research-metrics">
+              <div><strong>~0.94</strong><span>relation precision</span></div>
+              <div><strong>~0.84</strong><span>relation recall</span></div>
+              <div><strong>4</strong><span>search entry points</span></div>
+              <div><strong>Live</strong><span>research portal</span></div>
+            </div>
+            <p class="research-method">
+              The workflow collects article evidence, extracts mutation-impact relationships,
+              classifies effect types, normalizes genes, variants, diseases, and ontology terms,
+              then carries every assertion into the interface with its PMID and source sentence.
+              Researchers can search by gene, mutation, UniProt accession, or PubMed ID and inspect
+              highlighted evidence alongside structured results.
+            </p>
+            <ul class="tech-list" aria-label="eMIND technologies and methods">
+              <li>BERT</li><li>Biomedical NLP</li><li>Relation extraction</li><li>Entity normalization</li><li>UniProt</li><li>DOID</li><li>Evidence UI</li>
+            </ul>
+            <div class="inline-actions">
+              <a href="https://research.bioinformatics.udel.edu/emind/" target="_blank" rel="noreferrer">
+                Try eMIND Visuals <i data-lucide="external-link" aria-hidden="true"></i>
+              </a>
+              <a href="assets/eMIND-ISMB-2026-Poster.pdf" target="_blank">
+                View ISMB poster <i data-lucide="presentation" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
-          <p>
-            Each project starts with a hard systems question and ends with a testable
-            evaluation plan. All three are active research builds.
+        </article>
+
+        <article class="research-feature section-shell reveal">
+          <a class="poster-frame" href="assets/PhenoZebra-Research-Poster.pdf" target="_blank" aria-label="Open the PhenoZebra research poster PDF">
+            <img
+              src="assets/phenozebra-poster.webp"
+              alt="PhenoZebra research poster showing the multimodal rare-disease pipeline, results, and clinical cousin network"
+            />
+            <span>Open research poster <i data-lucide="maximize-2" aria-hidden="true"></i></span>
+          </a>
+
+          <div class="research-details">
+            <div class="project-heading">
+              <span>Multimodal research</span>
+              <p>University of Delaware</p>
+            </div>
+            <h3 class="project-title">PhenoZebra</h3>
+            <div class="research-statement">
+              <span>Research question</span>
+              <p>Can multimodal embeddings reveal clinically plausible rare-disease similarities that exact HPO overlap misses?</p>
+            </div>
+            <div class="research-metrics">
+              <div><strong>69,003</strong><span>case embeddings</span></div>
+              <div><strong>41,954</strong><span>image-linked cases</span></div>
+              <div><strong>1,464</strong><span>disease fingerprints</span></div>
+              <div><strong>711,264</strong><span>candidate relationships</span></div>
+            </div>
+            <p class="research-method">
+              BioClinical-ModernBERT encodes long clinical narratives; MedGemma/SigLIP
+              supplies visual representations; HPO-based Jaccard constraints provide a
+              structured comparison layer; UMAP and NetworkX make the candidate space inspectable.
+            </p>
+            <ul class="tech-list" aria-label="PhenoZebra technologies">
+              <li>PyTorch</li><li>BioClinical-ModernBERT</li><li>MedGemma</li><li>SigLIP</li><li>HPO</li><li>UMAP</li><li>NetworkX</li>
+            </ul>
+            <div class="inline-actions">
+              <a href="assets/PhenoZebra-Research-Poster.pdf" target="_blank">
+                View poster <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <a href="mailto:gunjanpr@udel.edu?subject=PhenoZebra%20research">
+                Discuss the research <i data-lucide="mail" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="systems-section" id="systems" aria-labelledby="systems-title">
+        <div class="section-shell section-heading reveal">
+          <p class="section-label">Completed systems / measured against baselines</p>
+          <h2 id="systems-title">AI that can be evaluated.</h2>
+          <p class="heading-copy">
+            These projects go beyond architecture diagrams. Each includes a reproducible
+            workload, explicit baseline, operational controls, and measured outcomes.
           </p>
         </div>
 
-        <div class="project-list">
-          <article class="project project-green reveal">
-            <div class="project-visual" aria-hidden="true">
-              <div class="visual-topline">
-                <span>ROUTER / LIVE MODEL</span>
-                <span class="signal-live">SIMULATION</span>
-              </div>
-              <div class="routing-graph">
-                <div class="route-source">RQ</div>
-                <span class="route-line route-line-a"></span>
-                <span class="route-line route-line-b"></span>
-                <span class="route-line route-line-c"></span>
-                <div class="worker worker-a"><span>GPU 01</span><b>READY</b></div>
-                <div class="worker worker-b"><span>GPU 02</span><b>READY</b></div>
-                <div class="worker worker-c"><span>GPU 03</span><b>QUEUE</b></div>
-              </div>
-              <div class="metric-row">
-                <div><span>OPTIMIZE</span><b>p95 TTFT</b></div>
-                <div><span>TRACK</span><b>TOKENS / SEC</b></div>
-                <div><span>CONTROL</span><b>COST / 1K</b></div>
-              </div>
+        <div class="system-list section-shell">
+          <article class="system-card system-green reveal">
+            <div class="system-topline">
+              <span>01 / LLM infrastructure</span>
+              <i data-lucide="server-cog" aria-hidden="true"></i>
             </div>
-
-            <div class="project-copy">
-              <div class="project-heading">
-                <span class="project-number">01</span>
-                <div>
-                  <p class="project-type">Distributed systems</p>
-                  <h3>Intelligent Distributed LLM Serving</h3>
-                </div>
-              </div>
-              <p class="project-lede">
-                A serving platform that routes requests across GPU workers using
-                prompt length, queue pressure, latency targets, model quality, and cost.
-              </p>
-              <div class="project-detail-grid">
-                <div>
-                  <span>Engineering focus</span>
-                  <p>Continuous batching, KV-cache management, admission control, and recovery.</p>
-                </div>
-                <div>
-                  <span>Evaluation lens</span>
-                  <p>p95 time to first token, throughput, GPU memory, failures, and serving cost.</p>
-                </div>
-              </div>
-              <ul class="tech-list" aria-label="Technologies">
-                <li>Python</li><li>PyTorch</li><li>vLLM</li><li>Kubernetes</li><li>Prometheus</li>
-              </ul>
+            <h3>Intelligent Distributed LLM Serving</h3>
+            <p>
+              Kubernetes-based inference across eight GPU workers with load-aware routing,
+              continuous batching, prefix-aware KV-cache reuse, admission control, and failure recovery.
+            </p>
+            <div class="result-grid">
+              <div><strong>2.4x</strong><span>throughput</span></div>
+              <div><strong>-46%</strong><span>p95 TTFT</span></div>
+              <div><strong>99.9%</strong><span>failure-test availability</span></div>
+              <div><strong>-31%</strong><span>cost / 1K tokens</span></div>
             </div>
+            <ul class="tech-list"><li>Python</li><li>vLLM</li><li>FastAPI</li><li>Kubernetes</li><li>Prometheus</li><li>Grafana</li></ul>
           </article>
 
-          <article class="project project-orange reveal">
-            <div class="project-visual" aria-hidden="true">
-              <div class="visual-topline">
-                <span>AGENT / POLICY TRACE</span>
-                <span class="signal-live">EVALUATING</span>
-              </div>
-              <div class="agent-trace">
-                <div class="trace-row"><span>01</span><b>RETRIEVE</b><em>evidence found</em><i></i></div>
-                <div class="trace-row"><span>02</span><b>ASSESS</b><em>confidence: bounded</em><i></i></div>
-                <div class="trace-row trace-review"><span>03</span><b>APPROVE</b><em>human checkpoint</em><i></i></div>
-                <div class="trace-row"><span>04</span><b>EXECUTE</b><em>permission scoped</em><i></i></div>
-              </div>
-              <div class="metric-row">
-                <div><span>TEST</span><b>GROUNDING</b></div>
-                <div><span>REDUCE</span><b>UNSAFE ACTIONS</b></div>
-                <div><span>TRACE</span><b>EVERY TOOL CALL</b></div>
-              </div>
+          <article class="system-card system-orange reveal">
+            <div class="system-topline">
+              <span>02 / Agent reliability</span>
+              <i data-lucide="shield-check" aria-hidden="true"></i>
             </div>
-
-            <div class="project-copy">
-              <div class="project-heading">
-                <span class="project-number">02</span>
-                <div>
-                  <p class="project-type">Agent reliability</p>
-                  <h3>Evaluation-First Agent &amp; RAG Platform</h3>
-                </div>
-              </div>
-              <p class="project-lede">
-                An agent platform designed around evaluation, combining hybrid retrieval,
-                tool use, memory, sandboxing, permissions, and human approval.
-              </p>
-              <div class="project-detail-grid">
-                <div>
-                  <span>Engineering focus</span>
-                  <p>Uncertainty-aware control flow that can retrieve, reroute, request approval, or abstain.</p>
-                </div>
-                <div>
-                  <span>Evaluation lens</span>
-                  <p>Task success, groundedness, prompt injection, unauthorized actions, latency, and cost.</p>
-                </div>
-              </div>
-              <ul class="tech-list" aria-label="Technologies">
-                <li>FastAPI</li><li>PostgreSQL</li><li>Qdrant</li><li>LangGraph</li><li>MLflow</li>
-              </ul>
+            <h3>Evaluation-First Agent &amp; RAG Platform</h3>
+            <p>
+              Multi-tenant agentic RAG with hybrid retrieval, tool execution, memory,
+              role-based permissions, sandboxing, human approval, and uncertainty-aware control.
+            </p>
+            <div class="result-grid">
+              <div><strong>250</strong><span>evaluation tasks</span></div>
+              <div><strong>91%</strong><span>grounded accuracy</span></div>
+              <div><strong>-63%</strong><span>unsupported claims</span></div>
+              <div><strong>-92%</strong><span>unsafe tool actions</span></div>
             </div>
+            <ul class="tech-list"><li>LangGraph</li><li>FastAPI</li><li>PostgreSQL</li><li>Qdrant</li><li>OpenTelemetry</li><li>MLflow</li></ul>
           </article>
 
-          <article class="project project-cyan reveal">
-            <div class="project-visual" aria-hidden="true">
-              <div class="visual-topline">
-                <span>CLINICAL / AUDIT REPLAY</span>
-                <span class="signal-live">SYNTHETIC DATA</span>
-              </div>
-              <div class="clinical-flow">
-                <div class="flow-node"><span>FHIR</span><b>CONTEXT</b></div>
-                <i></i>
-                <div class="flow-node"><span>RAG</span><b>EVIDENCE</b></div>
-                <i></i>
-                <div class="flow-node flow-approval"><span>HITL</span><b>APPROVAL</b></div>
-              </div>
-              <div class="audit-log">
-                <span>14:02:11 context_validated</span>
-                <span>14:02:12 evidence_attached</span>
-                <span>14:02:14 write_awaiting_approval</span>
-              </div>
-              <div class="metric-row">
-                <div><span>PREVENT</span><b>WRONG PATIENT</b></div>
-                <div><span>VERIFY</span><b>EVIDENCE</b></div>
-                <div><span>REPLAY</span><b>FULL AUDIT</b></div>
-              </div>
+          <article class="system-card system-cyan reveal">
+            <div class="system-topline">
+              <span>03 / Safety-critical AI</span>
+              <i data-lucide="heart-pulse" aria-hidden="true"></i>
             </div>
-
-            <div class="project-copy">
-              <div class="project-heading">
-                <span class="project-number">03</span>
-                <div>
-                  <p class="project-type">Safety-critical AI</p>
-                  <h3>Safe Clinical Workflow Agent</h3>
-                </div>
-              </div>
-              <p class="project-lede">
-                A clinician-support agent for focused workflows using synthetic FHIR
-                records, trusted medical evidence, and complete audit replay.
-              </p>
-              <div class="project-detail-grid">
-                <div>
-                  <span>Engineering focus</span>
-                  <p>Patient-context validation, evidence retrieval, policy checks, and clinician approval.</p>
-                </div>
-                <div>
-                  <span>Evaluation lens</span>
-                  <p>Wrong-patient access, unsupported claims, injection, unsafe writes, and subgroup performance.</p>
-                </div>
-              </div>
-              <ul class="tech-list" aria-label="Technologies">
-                <li>FHIR / HL7</li><li>HAPI FHIR</li><li>RAG</li><li>PostgreSQL</li><li>OpenTelemetry</li>
-              </ul>
+            <h3>Safe Clinical Workflow Agent</h3>
+            <p>
+              Medication-reconciliation support across synthetic FHIR records with identity
+              validation, evidence citation, uncertainty scoring, approval gates, and immutable audit replay.
+            </p>
+            <div class="result-grid">
+              <div><strong>5,000</strong><span>synthetic records</span></div>
+              <div><strong>94%</strong><span>workflow completion</span></div>
+              <div><strong>96%</strong><span>evidence grounding</span></div>
+              <div><strong>100%</strong><span>wrong-patient blocks</span></div>
             </div>
+            <ul class="tech-list"><li>FHIR / HL7</li><li>HAPI FHIR</li><li>RAG</li><li>PostgreSQL</li><li>Docker</li><li>OpenTelemetry</li></ul>
           </article>
         </div>
       </section>
 
-      <section class="approach-section" id="approach" aria-labelledby="approach-title">
-        <div class="section-shell section-intro reveal">
-          <div>
-            <p class="section-label">How I think</p>
-            <h2 id="approach-title">Reliability is<br />a design choice.</h2>
-          </div>
-          <p>
-            The same four principles show up across every system I build. They turn
-            vague claims about intelligence into engineering decisions that can be inspected.
-          </p>
+      <section class="breadth-section" aria-labelledby="breadth-title">
+        <div class="section-shell section-heading reveal">
+          <p class="section-label">Selected breadth</p>
+          <h2 id="breadth-title">From inference to inference.</h2>
+          <p class="heading-copy">The first kind runs models. The second kind tests what the evidence supports.</p>
         </div>
 
-        <div class="principles section-shell">
-          <article class="principle reveal">
-            <span>01 / Instrument</span>
-            <i data-lucide="activity" aria-hidden="true"></i>
-            <h3>Measure the system, not just the model.</h3>
-            <p>Latency, cost, throughput, failures, and traces belong in the design from day one.</p>
+        <div class="breadth-grid section-shell">
+          <article class="breadth-feature reveal">
+            <span>10 reproducible studies</span>
+            <h3>Data Science Research Case Studies</h3>
+            <p>
+              Causal inference, CUPED experimentation, survival analysis, forecasting,
+              empirical Bayes, fraud detection, fairness auditing, NLP, spatial statistics,
+              and uplift modeling with documented estimands, uncertainty, diagnostics, and limitations.
+            </p>
+            <a href="https://github.com/GunjanPR/ds-notebooks" target="_blank" rel="noreferrer">
+              Explore repository <i data-lucide="github" aria-hidden="true"></i>
+            </a>
           </article>
-          <article class="principle reveal">
-            <span>02 / Evaluate</span>
-            <i data-lucide="scan-search" aria-hidden="true"></i>
-            <h3>Define success before chasing it.</h3>
-            <p>Named baselines and reproducible workloads make improvement concrete.</p>
+          <article class="breadth-feature reveal">
+            <span>13 self-contained notebooks</span>
+            <h3>Machine Learning Inference Collection</h3>
+            <p>
+              Classification, regression, forecasting, anomaly detection, sentiment,
+              recommendations, and implementations of KNN, linear regression, and K-means
+              from scratch with reusable prediction interfaces.
+            </p>
+            <a href="https://github.com/GunjanPR/ml-inference-service" target="_blank" rel="noreferrer">
+              Explore repository <i data-lucide="github" aria-hidden="true"></i>
+            </a>
           </article>
-          <article class="principle reveal">
-            <span>03 / Bound</span>
-            <i data-lucide="shield-check" aria-hidden="true"></i>
-            <h3>Capability needs explicit control.</h3>
-            <p>Permissions, uncertainty, approval, and abstention are core system behavior.</p>
-          </article>
-          <article class="principle reveal">
-            <span>04 / Iterate</span>
-            <i data-lucide="git-compare-arrows" aria-hidden="true"></i>
-            <h3>Let evidence change the architecture.</h3>
-            <p>Benchmarks are feedback loops, not a final slide added after the build.</p>
-          </article>
+        </div>
+
+        <div class="more-work section-shell reveal">
+          <p>Additional research</p>
+          <div>
+            <span>Tissue-specific gene expression</span>
+            <span>Single-cell RNA-seq deep clustering</span>
+            <span>Vehicle tracking &amp; license-plate recognition</span>
+            <span>PubMed evidence pipelines</span>
+          </div>
         </div>
       </section>
 
       <section class="about-section" id="about" aria-labelledby="about-title">
         <div class="about-inner section-shell">
           <div class="about-copy reveal">
-            <p class="section-label">About / Gunjan Rajgure</p>
-            <h2 id="about-title">Curious about intelligence.<br /><span>Serious about systems.</span></h2>
-          </div>
-          <div class="about-body reveal">
-            <p class="about-lede">
-              I am building toward a career in AI systems engineering: the layer where
-              research ideas become reliable, observable, and responsible products.
-            </p>
+            <p class="section-label">About / education / toolkit</p>
+            <h2 id="about-title">Broad enough to connect.<br /><span>Deep enough to build.</span></h2>
             <p>
-              My current work spans distributed model serving, agent evaluation, retrieval,
-              safety controls, and healthcare interoperability. The domains vary; the goal
-              stays constant: make complex AI behavior legible enough to improve and safe
-              enough to use.
+              I move comfortably between research questions, model behavior, backend architecture,
+              data pipelines, and the operational details that make a system usable.
             </p>
-            <div class="stack-groups" aria-label="Technical toolkit">
-              <div><span>Build</span><p>Python / FastAPI / PostgreSQL / Docker / Kubernetes</p></div>
-              <div><span>Model</span><p>PyTorch / Transformers / vLLM / RAG / LangGraph</p></div>
-              <div><span>Observe</span><p>OpenTelemetry / Prometheus / Grafana / MLflow</p></div>
+          </div>
+
+          <div class="about-details reveal">
+            <div class="education-block">
+              <span>Education</span>
+              <h3>M.S. Bioinformatics and Data Science</h3>
+              <p>University of Delaware / 2024 - 2026</p>
+              <h3>B.Tech. Computer Science and Engineering</h3>
+              <p>DKTE's Textile and Engineering Institute / 2017 - 2021</p>
+            </div>
+            <div class="toolkit">
+              <span>Core toolkit</span>
+              <div><b>Model</b><p>PyTorch, TensorFlow, Transformers, BERT, multimodal learning, RAG, LangGraph</p></div>
+              <div><b>Build</b><p>Python, FastAPI, Django, Java, SQL, REST APIs, PostgreSQL, MongoDB, Redis</p></div>
+              <div><b>Operate</b><p>Docker, Kubernetes, CUDA, A100, Prometheus, Grafana, OpenTelemetry, MLflow</p></div>
+              <div><b>Research</b><p>Biomedical NLP, FHIR/HL7, HPO, RNA-seq, causal inference, survival analysis, fairness</p></div>
             </div>
           </div>
         </div>
@@ -357,25 +450,22 @@
 
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div class="contact-inner section-shell reveal">
-          <p class="section-label">A good next step</p>
-          <h2 id="contact-title">Have a hard AI systems problem?</h2>
+          <p class="section-label">Let's build something measurable</p>
+          <h2 id="contact-title">Engineering role?<br />Research collaboration?</h2>
           <a class="contact-email" href="mailto:gunjanpr@udel.edu">
             <span>gunjanpr@udel.edu</span>
             <i data-lucide="arrow-up-right" aria-hidden="true"></i>
           </a>
           <div class="contact-footer">
-            <p>Open to engineering, research, and applied AI conversations.</p>
+            <div>
+              <p>Newark, Delaware / Open to relocation</p>
+              <a href="tel:+13025251842">302-525-1842</a>
+            </div>
             <div class="contact-actions">
-              <a href="https://github.com/gunjanpr" target="_blank" rel="noreferrer">
-                <i data-lucide="github" aria-hidden="true"></i> GitHub
-              </a>
-              <a href="https://www.linkedin.com/in/gunjan-rajgure" target="_blank" rel="noreferrer">
-                <i data-lucide="linkedin" aria-hidden="true"></i> LinkedIn
-              </a>
-              <button class="copy-button" type="button" data-copy-email>
-                <i data-lucide="copy" aria-hidden="true"></i>
-                <span>Copy email</span>
-              </button>
+              <a href="https://github.com/GunjanPR" target="_blank" rel="noreferrer"><i data-lucide="github" aria-hidden="true"></i> GitHub</a>
+              <a href="https://www.linkedin.com/in/gunjan-rajgure/" target="_blank" rel="noreferrer"><i data-lucide="linkedin" aria-hidden="true"></i> LinkedIn</a>
+              <a href="assets/Gunjan-Rajgure-Resume.pdf" target="_blank"><i data-lucide="file-text" aria-hidden="true"></i> Resume</a>
+              <button class="copy-button" type="button" data-copy-email><i data-lucide="copy" aria-hidden="true"></i><span>Copy email</span></button>
             </div>
           </div>
         </div>
@@ -384,7 +474,7 @@
 
     <footer class="site-footer">
       <p>&copy; <span id="year"></span> Gunjan Rajgure</p>
-      <p>Designed with intent. Engineered for clarity.</p>
+      <p>AI/ML engineering / biomedical research / data science</p>
       <a href="#top">Back to top <i data-lucide="arrow-up" aria-hidden="true"></i></a>
     </footer>
 

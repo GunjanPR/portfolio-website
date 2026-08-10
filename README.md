@@ -1,6 +1,9 @@
 # Gunjan Rajgure - AI Systems Portfolio
 
-A responsive, static portfolio built for GitHub Pages. No build step or package installation is required.
+A responsive, resume-led portfolio built for GitHub Pages. It presents Gunjan's
+professional experience, the deployed eMIND Visuals product, PhenoZebra research,
+measured AI systems projects, broader data science work, education, and technical
+toolkit. No build step or package installation is required.
 
 ## Preview
 
@@ -8,10 +11,10 @@ Open `index.html` directly in a browser.
 
 ## Personalize before publishing
 
-- Confirm the display name and email in `index.html` and `script.js`.
-- Confirm that the public GitHub and LinkedIn links are the profiles you want recruiters to use.
-- Replace research-stage language with measured results after the planned evaluations are complete.
-- Add project repository links once those repositories are ready for recruiter review.
+- Keep the downloadable resume in `assets/Gunjan-Rajgure-Resume.pdf` aligned with the master resume.
+- Keep the public eMIND poster and live application link aligned with the latest conference release.
+- Replace or add project repository links as more systems become public.
+- Update measured outcomes only when the corresponding resume evidence changes.
 
 ## Publish with GitHub Pages
 
