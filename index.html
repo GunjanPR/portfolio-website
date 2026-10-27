@@ -11,14 +11,14 @@
     <meta property="og:title" content="Gunjan Rajgure | AI/ML Engineer" />
     <meta
       property="og:description"
-      content="Deployed biomedical AI, multimodal research, LLM infrastructure, and production engineering with measurable outcomes."
+      content="Deployed biomedical AI, an LLM gateway, citation-grounded medical RAG, gated MLOps and a forecasting benchmark, each measured against a baseline."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://gunjanpr.github.io/portfolio-website/" />
     <meta property="og:image" content="https://gunjanpr.github.io/portfolio-website/assets/og-resume-portfolio.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Gunjan Rajgure | AI/ML Engineer" />
-    <meta name="twitter:description" content="LLM systems, multimodal biomedical AI, and rigorous data science." />
+    <meta name="twitter:description" content="LLM infrastructure, medical RAG, MLOps and forecasting, each measured against a baseline." />
     <meta name="twitter:image" content="https://gunjanpr.github.io/portfolio-website/assets/og-resume-portfolio.png" />
     <title>Gunjan Rajgure | AI/ML Engineer &amp; Biomedical Researcher</title>
     <link rel="icon" type="image/png" href="assets/favicon.png" />
@@ -81,7 +81,7 @@
             <span class="status-dot" aria-hidden="true"></span>
             Open to AI/ML engineering and research roles
           </div>
-          <p class="hero-kicker reveal">Deployed biomedical AI / LLM infrastructure / multimodal research</p>
+          <p class="hero-kicker reveal">Deployed biomedical AI / LLM systems / measured MLOps</p>
           <h1 id="hero-title" class="reveal">Gunjan<br /><span>Rajgure.</span></h1>
           <p class="hero-thesis reveal">
             <strong>I turn model capability into measurable systems.</strong>
@@ -91,6 +91,9 @@
           <div class="hero-actions reveal">
             <a class="button button-primary" href="#research">
               Explore deployed research <i data-lucide="arrow-down-right" aria-hidden="true"></i>
+            </a>
+            <a class="button button-ghost" href="#systems">
+              <i data-lucide="activity" aria-hidden="true"></i> See measured systems
             </a>
             <a class="button button-ghost" href="assets/Gunjan-Rajgure-Resume.pdf" target="_blank">
               <i data-lucide="file-text" aria-hidden="true"></i> View resume
@@ -123,12 +126,12 @@
           <p>eMIND relation precision</p>
         </article>
         <article>
-          <span class="proof-value" data-count="69003">69,003</span>
-          <p>clinical cases indexed</p>
+          <span class="proof-value">+24%</span>
+          <p>RAG NDCG@10 vs BM25 baseline</p>
         </article>
         <article>
-          <span class="proof-value">2.4x</span>
-          <p>LLM serving throughput</p>
+          <span class="proof-value">469/469</span>
+          <p>gateway requests served, backend killed</p>
         </article>
       </section>
 
@@ -305,72 +308,373 @@
 
       <section class="systems-section" id="systems" aria-labelledby="systems-title">
         <div class="section-shell section-heading reveal">
-          <p class="section-label">Completed systems / measured against baselines</p>
-          <h2 id="systems-title">AI that can be evaluated.</h2>
+          <p class="section-label">Portfolio systems / 2026 / measured against baselines</p>
+          <h2 id="systems-title">Four systems.<br />Every number measured.</h2>
           <p class="heading-copy">
-            These projects go beyond architecture diagrams. Each includes a reproducible
-            workload, explicit baseline, operational controls, and measured outcomes.
+            Built in sequence, each one reusing the last: the gateway serves every model call the
+            RAG system makes. Each result below comes from the repository&apos;s own benchmark files,
+            shown next to its baseline and its caveat.
           </p>
         </div>
 
-        <div class="system-list section-shell">
-          <article class="system-card system-green reveal">
-            <div class="system-topline">
-              <span>01 / LLM infrastructure</span>
-              <i data-lucide="server-cog" aria-hidden="true"></i>
+        <nav class="system-index section-shell reveal" aria-label="Portfolio systems">
+          <a href="#llm-gateway"><b>01</b> LLM gateway</a>
+          <a href="#healthcare-rag"><b>02</b> Healthcare RAG</a>
+          <a href="#mlops"><b>03</b> ML pipeline + MLOps</a>
+          <a href="#forecasting"><b>04</b> Forecasting benchmark</a>
+          <a href="#clinical-agent"><b>05</b> Clinical agent, in progress</a>
+        </nav>
+
+        <div class="case-list section-shell">
+          <article class="case system-green reveal" id="llm-gateway" aria-labelledby="gateway-title">
+            <div class="case-main">
+              <div class="system-topline">
+                <span>01 / LLM infrastructure</span>
+                <i data-lucide="server-cog" aria-hidden="true"></i>
+              </div>
+              <h3 id="gateway-title">LLM Inference Gateway</h3>
+              <p class="case-lede">
+                One OpenAI-compatible endpoint in front of Ollama and vLLM, so applications stop
+                re-implementing auth, retries, caching and cost tracking.
+              </p>
+              <dl class="case-facts">
+                <div>
+                  <dt>Built</dt>
+                  <dd>
+                    Cost, latency and quality routing; retries, circuit breakers and failover;
+                    exact and semantic caching with an LLM verifier; request coalescing; load
+                    shedding; PII redaction that also works on streamed answers; per-tenant rate
+                    limits and a usage ledger with cost per request.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Operated</dt>
+                  <dd>
+                    OpenTelemetry traces, a 24-panel Grafana dashboard, 13 Prometheus alert rules
+                    unit-tested with promtool, and 159 unit tests including failure injection and
+                    property-based tests. Deployed to a kind Kubernetes cluster in CI.
+                  </dd>
+                </div>
+              </dl>
+              <ul class="tech-list" aria-label="LLM gateway technologies">
+                <li>FastAPI</li><li>Redis</li><li>PostgreSQL</li><li>Ollama</li><li>vLLM</li><li>Prometheus</li><li>Grafana</li><li>OpenTelemetry</li><li>Kubernetes</li>
+              </ul>
+              <div class="inline-actions">
+                <a href="https://github.com/GunjanPR/01-llm-gateway" target="_blank" rel="noreferrer">
+                  View repository <i data-lucide="github" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
-            <h3>Intelligent Distributed LLM Serving</h3>
-            <p>
-              Kubernetes-based inference across eight GPU workers with load-aware routing,
-              continuous batching, prefix-aware KV-cache reuse, admission control, and failure recovery.
-            </p>
-            <div class="result-grid">
-              <div><strong>2.4x</strong><span>throughput</span></div>
-              <div><strong>-46%</strong><span>p95 TTFT</span></div>
-              <div><strong>99.9%</strong><span>failure-test availability</span></div>
-              <div><strong>-31%</strong><span>cost / 1K tokens</span></div>
+
+            <div class="case-evidence">
+              <p class="evidence-label">Measured against baseline</p>
+              <figure class="compare">
+                <figcaption>Goodput at 3&times; overload, one server <span>req/s, higher is better</span></figcaption>
+                <div class="bar-row is-base"><span>No shedding</span><i style="--w: 9.8%"></i><b>1.9</b></div>
+                <div class="bar-row"><span>Load shedding</span><i style="--w: 100%"></i><b>19.3</b></div>
+              </figure>
+              <figure class="compare">
+                <figcaption>Gateway CPU per uncached request <span>ms, lower is better</span></figcaption>
+                <div class="bar-row is-base"><span>Before profiling</span><i style="--w: 100%"></i><b>3.98</b></div>
+                <div class="bar-row"><span>Plain ASGI + aiohttp</span><i style="--w: 40.5%"></i><b>1.61</b></div>
+              </figure>
+              <div class="result-grid">
+                <div><strong>+1.8 ms</strong><span>p50 overhead vs calling Ollama directly</span></div>
+                <div><strong>469/469</strong><span>requests served with a backend killed</span></div>
+                <div><strong>2,010 &rarr; 0</strong><span>PII entities leaked in streamed answers</span></div>
+                <div><strong>0/10</strong><span>false semantic-cache hits, held-out pairs</span></div>
+              </div>
+              <p class="caveat">
+                <b>Caveat</b> The CPU, overload and coalescing numbers use a mock backend on a cloud
+                VM to isolate the gateway. Overhead and failover are on an RTX 4050 laptop with real Ollama.
+              </p>
             </div>
-            <ul class="tech-list"><li>Python</li><li>vLLM</li><li>FastAPI</li><li>Kubernetes</li><li>Prometheus</li><li>Grafana</li></ul>
           </article>
 
-          <article class="system-card system-orange reveal">
-            <div class="system-topline">
-              <span>02 / Agent reliability</span>
-              <i data-lucide="shield-check" aria-hidden="true"></i>
+          <article class="case system-cyan reveal" id="healthcare-rag" aria-labelledby="rag-title">
+            <div class="case-main">
+              <div class="system-topline">
+                <span>02 / Retrieval-augmented generation</span>
+                <i data-lucide="book-open-check" aria-hidden="true"></i>
+              </div>
+              <h3 id="rag-title">Citation-Grounded Medical RAG</h3>
+              <p class="case-lede">
+                Answers researchers can check against the literature: every claim cites a passage,
+                and the system declines when the evidence is weak.
+              </p>
+              <dl class="case-facts">
+                <div>
+                  <dt>Built</dt>
+                  <dd>
+                    500 PubMed Central open-access articles in section-aware chunks. Hybrid BM25
+                    (OpenSearch) and dense (Qdrant) retrieval fused by reciprocal rank, MedCPT
+                    reranking, and a LangGraph flow: retrieve, rerank, abstain if weak, generate
+                    with citations, verify, repair citations once.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Evaluated</dt>
+                  <dd>
+                    A 159-question dev/test harness with paired bootstrap confidence intervals.
+                    Blind hand labels showed the best LLM judge agreed only at kappa 0.58, where a
+                    20-item audit had suggested 0.83. All inference runs through the gateway.
+                  </dd>
+                </div>
+              </dl>
+              <ul class="tech-list" aria-label="Healthcare RAG technologies">
+                <li>FastAPI</li><li>LangGraph</li><li>OpenSearch</li><li>Qdrant</li><li>MedCPT</li><li>Qwen2.5 7B</li><li>Jaeger</li><li>Grafana</li>
+              </ul>
+              <div class="inline-actions">
+                <a href="https://github.com/GunjanPR/02-healthcare-rag" target="_blank" rel="noreferrer">
+                  View repository <i data-lucide="github" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
-            <h3>Evaluation-First Agent &amp; RAG Platform</h3>
-            <p>
-              Multi-tenant agentic RAG with hybrid retrieval, tool execution, memory,
-              role-based permissions, sandboxing, human approval, and uncertainty-aware control.
-            </p>
-            <div class="result-grid">
-              <div><strong>250</strong><span>evaluation tasks</span></div>
-              <div><strong>91%</strong><span>grounded accuracy</span></div>
-              <div><strong>-63%</strong><span>unsupported claims</span></div>
-              <div><strong>-92%</strong><span>unsafe tool actions</span></div>
+
+            <div class="case-evidence">
+              <p class="evidence-label">Measured against BM25-only, 92 held-out questions</p>
+              <figure class="compare">
+                <figcaption>Retrieval NDCG@10 <span>higher is better</span></figcaption>
+                <div class="bar-row is-base"><span>BM25 only</span><i style="--w: 59.2%"></i><b>0.592</b></div>
+                <div class="bar-row"><span>Hybrid + rerank</span><i style="--w: 73.4%"></i><b>0.734</b></div>
+              </figure>
+              <figure class="compare">
+                <figcaption>Recall@5 <span>higher is better</span></figcaption>
+                <div class="bar-row is-base"><span>BM25 only</span><i style="--w: 71.7%"></i><b>0.717</b></div>
+                <div class="bar-row"><span>Hybrid + rerank</span><i style="--w: 89.1%"></i><b>0.891</b></div>
+              </figure>
+              <div class="result-grid">
+                <div><strong>95.3%</strong><span>answers faithful, blind hand labels (81/85)</span></div>
+                <div><strong>84.8%</strong><span>hand-checked accuracy vs 77.2% baseline</span></div>
+                <div><strong>14/14</strong><span>out-of-scope questions declined</span></div>
+                <div><strong>8.5 s</strong><span>p95 latency, 20 W laptop GPU, $0/query</span></div>
+              </div>
+              <p class="caveat">
+                <b>Caveat</b> Faithfulness has a 95% CI of 88.5&ndash;98.2%, so the 90% target is met
+                on the point estimate only, and the labels are by an AI, not clinicians. The accuracy gain&apos;s
+                CI runs from +0.0 to +20.7 points: improved, not significantly. The NDCG@10 gain is significant.
+              </p>
             </div>
-            <ul class="tech-list"><li>LangGraph</li><li>FastAPI</li><li>PostgreSQL</li><li>Qdrant</li><li>OpenTelemetry</li><li>MLflow</li></ul>
           </article>
 
-          <article class="system-card system-cyan reveal">
-            <div class="system-topline">
-              <span>03 / Safety-critical AI</span>
-              <i data-lucide="heart-pulse" aria-hidden="true"></i>
+          <article class="case system-orange reveal" id="mlops" aria-labelledby="mlops-title">
+            <div class="case-main">
+              <div class="system-topline">
+                <span>03 / ML pipeline + MLOps</span>
+                <i data-lucide="git-branch" aria-hidden="true"></i>
+              </div>
+              <h3 id="mlops-title">Gated MLOps for Readmission Risk</h3>
+              <p class="case-lede">
+                A full model lifecycle on 101,766 real hospital encounters, where a statistical gate,
+                not a leaderboard, decides what reaches production.
+              </p>
+              <dl class="case-facts">
+                <div>
+                  <dt>Built</dt>
+                  <dd>
+                    DVC-versioned, Pandera-validated data; logistic regression vs Optuna-tuned
+                    XGBoost; an MLflow registry with a champion/challenger gate (paired-bootstrap
+                    AUC lift, minimum lift, calibration check); a FastAPI service on Kubernetes with
+                    an Evidently drift CronJob.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Shipped</dt>
+                  <dd>
+                    GitHub Actions lints, runs 67 tests, reproduces the DVC pipeline, gates the
+                    model, bakes the champion into an image and deploys it to kind on every push.
+                    One <code>dvc repro</code> rebuilds every metric from the raw download.
+                  </dd>
+                </div>
+              </dl>
+              <ul class="tech-list" aria-label="MLOps technologies">
+                <li>XGBoost</li><li>Optuna</li><li>SHAP</li><li>MLflow</li><li>DVC</li><li>Pandera</li><li>Evidently</li><li>FastAPI</li><li>Kubernetes</li><li>GitHub Actions</li>
+              </ul>
+              <div class="inline-actions">
+                <a href="https://github.com/GunjanPR/03-ml-pipeline-mlops" target="_blank" rel="noreferrer">
+                  View repository <i data-lucide="github" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
-            <h3>Safe Clinical Workflow Agent</h3>
-            <p>
-              Medication-reconciliation support across synthetic FHIR records with identity
-              validation, evidence citation, uncertainty scoring, approval gates, and immutable audit replay.
-            </p>
-            <div class="result-grid">
-              <div><strong>5,000</strong><span>synthetic records</span></div>
-              <div><strong>94%</strong><span>workflow completion</span></div>
-              <div><strong>96%</strong><span>evidence grounding</span></div>
-              <div><strong>100%</strong><span>wrong-patient blocks</span></div>
+
+            <div class="case-evidence">
+              <p class="evidence-label">Measured against baseline</p>
+              <figure class="compare">
+                <figcaption>Simulated data shifts caught <span>of 5, with 0/20 false alarms</span></figcaption>
+                <div class="bar-row is-base"><span>Drifted-share rule</span><i style="--w: 0%"></i><b>0/5</b></div>
+                <div class="bar-row"><span>SHAP + output drift</span><i style="--w: 80%"></i><b>4/5</b></div>
+              </figure>
+              <figure class="compare">
+                <figcaption>Server-side /predict, one record <span>ms, lower is better</span></figcaption>
+                <div class="bar-row is-base"><span>sklearn pipeline</span><i style="--w: 100%"></i><b>~21</b></div>
+                <div class="bar-row"><span>Verified fast encoder</span><i style="--w: 3.3%"></i><b>0.70</b></div>
+              </figure>
+              <div class="result-grid">
+                <div><strong>Blocked</strong><span>tuned XGBoost: +0.0087 AUC, under the +0.01 bar</span></div>
+                <div><strong>0.607 &rarr; 0.668</strong><span>AUC restored by gated retraining after drift</span></div>
+                <div><strong>&le; 0.008</strong><span>calibration error (ECE), both models</span></div>
+                <div><strong>2.4&times;</strong><span>random share of readmissions in top 10%</span></div>
+              </div>
+              <p class="caveat">
+                <b>Caveat</b> AUC falls with age (0.745 under 40, 0.619 over 80), and it traces to the data:
+                prior stays barely predict readmission for over-80s. Five model variants left the gap at
+                0.115&ndash;0.160, so no fix was shipped. The XGBoost lift was real but small, so the gate kept the simpler model.
+              </p>
             </div>
-            <ul class="tech-list"><li>FHIR / HL7</li><li>HAPI FHIR</li><li>RAG</li><li>PostgreSQL</li><li>Docker</li><li>OpenTelemetry</li></ul>
+          </article>
+
+          <article class="case system-blue reveal" id="forecasting" aria-labelledby="forecast-title">
+            <div class="case-main">
+              <div class="system-topline">
+                <span>04 / Time series forecasting</span>
+                <i data-lucide="chart-line" aria-hidden="true"></i>
+              </div>
+              <h3 id="forecast-title">Forecasting Benchmark, 10 Methods</h3>
+              <p class="case-lede">
+                A rolling-origin benchmark that asks which forecaster wins, by how much, whether the
+                result replicates, and whether it transfers to another domain.
+              </p>
+              <dl class="case-facts">
+                <div>
+                  <dt>Built</dt>
+                  <dd>
+                    Naive baselines, ETS, ARIMA, Theta, their combination, Prophet and a global
+                    LightGBM behind one interface, scored on MASE, MSIS and interval coverage with
+                    Diebold-Mariano, Holm-corrected Wilcoxon and Friedman-Nemenyi tests.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Tested</dt>
+                  <dd>
+                    M4-Monthly on two independent 500-series samples, then 342 UCI electricity
+                    clients. Ships with a Streamlit dashboard, Docker, and CI that runs a real M4
+                    smoke benchmark and 65 tests on every push.
+                  </dd>
+                </div>
+              </dl>
+              <ul class="tech-list" aria-label="Forecasting technologies">
+                <li>statsforecast</li><li>statsmodels</li><li>Prophet</li><li>LightGBM</li><li>SciPy</li><li>Streamlit</li><li>Docker</li>
+              </ul>
+              <div class="inline-actions">
+                <a href="https://github.com/GunjanPR/04-time-series-forecasting" target="_blank" rel="noreferrer">
+                  View repository <i data-lucide="github" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="case-evidence">
+              <p class="evidence-label">Measured against seasonal naive, M4-Monthly</p>
+              <figure class="compare">
+                <figcaption>MASE, 1,500 series-windows <span>lower is better</span></figcaption>
+                <div class="bar-row is-base"><span>Seasonal naive</span><i style="--w: 100%"></i><b>1.326</b></div>
+                <div class="bar-row"><span>ETS + ARIMA + Theta</span><i style="--w: 72%"></i><b>0.955</b></div>
+              </figure>
+              <figure class="compare">
+                <figcaption>LightGBM interval score (MSIS) <span>lower is better, 95% coverage held</span></figcaption>
+                <div class="bar-row is-base"><span>Split conformal</span><i style="--w: 100%"></i><b>22.4</b></div>
+                <div class="bar-row"><span>Volatility-scaled</span><i style="--w: 49.1%"></i><b>11.0</b></div>
+              </figure>
+              <div class="result-grid">
+                <div><strong>&minus;28%</strong><span>MASE vs seasonal naive (&minus;25.7% on 2nd sample)</span></div>
+                <div><strong>0.92</strong><span>Spearman rank agreement across samples</span></div>
+                <div><strong>61%</strong><span>Prophet&apos;s 95% interval coverage, last on both</span></div>
+                <div><strong>90 &rarr; 94%</strong><span>LightGBM 95% coverage, electricity data</span></div>
+              </div>
+              <p class="caveat">
+                <b>Caveat</b> The M4 win does not transfer. On daily electricity load the ranking flips:
+                a global LightGBM is best (&minus;3.0% MASE) and three statistical models are no better than
+                seasonal naive. AutoETS&apos;s statistical tie with the best method did not replicate.
+              </p>
+            </div>
+          </article>
+
+          <article class="case system-green reveal" id="clinical-agent" aria-labelledby="clinical-title">
+            <div class="case-main">
+              <div class="system-topline">
+                <span>05 / Safety-critical agent / in progress</span>
+                <i data-lucide="heart-pulse" aria-hidden="true"></i>
+              </div>
+              <h3 id="clinical-title">Safe Clinical Workflow Agent</h3>
+              <p class="case-lede">
+                Medication-reconciliation support over 5,000 synthetic FHIR patients, where every
+                recommendation cites its evidence and nothing reaches the chart without a clinician&apos;s approval.
+              </p>
+              <dl class="case-facts">
+                <div>
+                  <dt>Built</dt>
+                  <dd>
+                    A LangGraph workflow: verify identity, gather the chart, guard the free text,
+                    parse, reconcile, route. It flags omissions, dose and frequency changes,
+                    interactions, allergies, renal limits and duplications against a 62-entry
+                    knowledge base with BM25 evidence retrieval, and routes low-confidence cases to a pharmacist.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Safety</dt>
+                  <dd>
+                    Two-identifier identity check with a session lock, role-based access, HMAC
+                    approval tokens bound to the proposal, a prompt-injection guard, and a
+                    hash-chained audit log that replays every decision.
+                  </dd>
+                </div>
+              </dl>
+              <ul class="tech-list" aria-label="Clinical agent technologies">
+                <li>LangGraph</li><li>FastAPI</li><li>FHIR R4</li><li>Synthea</li><li>HAPI FHIR</li><li>PostgreSQL</li><li>Ollama</li><li>OpenTelemetry</li>
+              </ul>
+              <div class="inline-actions">
+                <a href="https://github.com/GunjanPR/03-safe-clinical-workflow-agent" target="_blank" rel="noreferrer">
+                  View repository <i data-lucide="github" aria-hidden="true"></i>
+                </a>
+                <span class="status-note"><i data-lucide="flask-conical" aria-hidden="true"></i> Held-out evaluation in progress</span>
+              </div>
+            </div>
+
+            <div class="case-evidence">
+              <p class="evidence-label">Dev split, 150 cases, vs the same agent without its safety layer</p>
+              <figure class="compare">
+                <figcaption>Unsafe writes committed, 33 attack cases <span>lower is better</span></figcaption>
+                <div class="bar-row is-base"><span>No safety layer</span><i style="--w: 100%"></i><b>40</b></div>
+                <div class="bar-row"><span>Full agent</span><i style="--w: 0%"></i><b>0</b></div>
+              </figure>
+              <figure class="compare">
+                <figcaption>Wrong-patient tests blocked <span>of 10, higher is better</span></figcaption>
+                <div class="bar-row is-base"><span>No safety layer</span><i style="--w: 0%"></i><b>0/10</b></div>
+                <div class="bar-row"><span>Full agent</span><i style="--w: 100%"></i><b>10/10</b></div>
+              </figure>
+              <div class="result-grid">
+                <div><strong>269/269</strong><span>recommendations cite chart and reference</span></div>
+                <div><strong>15/15</strong><span>injections flagged, 0/107 benign statements</span></div>
+                <div><strong>11/11</strong><span>unnameable medications routed to a pharmacist</span></div>
+                <div><strong>150/150</strong><span>audit replays match the live outcome</span></div>
+              </div>
+              <p class="caveat">
+                <b>Caveat</b> These are dev-split results, and the dev split was used to fix the parser
+                and matcher, so they are not held out; the 600-case test split has not been run yet.
+                Patients are synthetic, and the cases, labels and knowledge base were generated by AI,
+                not reviewed by clinicians or a pharmacist. Demo only, not for clinical use.
+              </p>
+            </div>
           </article>
         </div>
+
+        <figure class="trace-figure section-shell reveal">
+          <figcaption class="trace-copy">
+            <span class="section-label">How the systems connect</span>
+            <strong>One request, two services, one trace.</strong>
+            <span>
+              A question to the RAG API, followed through the gateway&apos;s guardrails, exact and
+              semantic cache, router and model call: 54 spans in a single Jaeger trace, so latency
+              and cost are attributable end to end.
+            </span>
+          </figcaption>
+          <img
+            src="assets/rag-gateway-trace.webp"
+            width="1200"
+            height="789"
+            loading="lazy"
+            alt="Jaeger trace of a healthcare-rag POST /ask request lasting 3.86 seconds, with retrieve, rerank and generate spans calling llm-gateway embedding, guardrail, cache and router spans"
+          />
+        </figure>
       </section>
 
       <section class="breadth-section" aria-labelledby="breadth-title">
@@ -439,10 +743,11 @@
             </div>
             <div class="toolkit">
               <span>Core toolkit</span>
-              <div><b>Model</b><p>PyTorch, TensorFlow, Transformers, BERT, multimodal learning, RAG, LangGraph</p></div>
-              <div><b>Build</b><p>Python, FastAPI, Django, Java, SQL, REST APIs, PostgreSQL, MongoDB, Redis</p></div>
-              <div><b>Operate</b><p>Docker, Kubernetes, CUDA, A100, Prometheus, Grafana, OpenTelemetry, MLflow</p></div>
-              <div><b>Research</b><p>Biomedical NLP, FHIR/HL7, HPO, RNA-seq, causal inference, survival analysis, fairness</p></div>
+              <div><b>Model</b><p>PyTorch, Transformers, BERT, multimodal learning, RAG, LangGraph, XGBoost, LightGBM, statsforecast</p></div>
+              <div><b>Build</b><p>Python, FastAPI, Java, SQL, REST APIs, PostgreSQL, Redis, OpenSearch, Qdrant</p></div>
+              <div><b>Operate</b><p>Docker, Kubernetes, GitHub Actions, MLflow, DVC, Evidently, Prometheus, Grafana, OpenTelemetry, CUDA</p></div>
+              <div><b>Evaluate</b><p>Baselines, bootstrap CIs, significance tests, blind hand labels, calibration, drift simulation</p></div>
+              <div><b>Research</b><p>Biomedical NLP, ontologies (HPO, DOID), RNA-seq, causal inference, survival analysis, fairness</p></div>
             </div>
           </div>
         </div>
