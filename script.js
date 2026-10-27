@@ -7,7 +7,15 @@ const copyEmailButton = document.querySelector("[data-copy-email]");
 const year = document.querySelector("#year");
 const email = "gunjanrajgureinusa@gmail.com";
 
-const storedTheme = localStorage.getItem("portfolio-theme");
+function readStoredTheme() {
+  try {
+    return localStorage.getItem("portfolio-theme");
+  } catch {
+    return null;
+  }
+}
+
+const storedTheme = readStoredTheme();
 const preferredTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
 root.dataset.theme = storedTheme || preferredTheme;
 
@@ -34,7 +42,11 @@ function closeMenu() {
 
 themeToggle?.addEventListener("click", () => {
   root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
-  localStorage.setItem("portfolio-theme", root.dataset.theme);
+  try {
+    localStorage.setItem("portfolio-theme", root.dataset.theme);
+  } catch {
+    // Storage can be blocked; the theme still applies for this visit.
+  }
   updateThemeControl();
 });
 

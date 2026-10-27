@@ -13,8 +13,12 @@ Open `index.html` directly in a browser.
 
 - Keep the downloadable resume in `assets/Gunjan-Rajgure-Resume.pdf` aligned with the master resume.
 - Keep the public eMIND poster and live application link aligned with the latest conference release.
-- Replace or add project repository links as more systems become public.
-- Update measured outcomes only when the corresponding resume evidence changes.
+- The Systems section shows the four portfolio projects (LLM gateway, healthcare RAG,
+  MLOps, forecasting). Each number comes from that repository's README,
+  `docs/resume_bullets.md` or `docs/benchmarks/`, with its baseline and caveat.
+- Repositories that are still private show "code on request". When one goes public,
+  replace its `private-repo` mailto link with the GitHub URL.
+- Update measured outcomes only when the source repository's evidence changes.
 
 ## Publish with GitHub Pages
 
