@@ -16,8 +16,6 @@ Open `index.html` directly in a browser.
 - The Systems section shows the four portfolio projects (LLM gateway, healthcare RAG,
   MLOps, forecasting). Each number comes from that repository's README,
   `docs/resume_bullets.md` or `docs/benchmarks/`, with its baseline and caveat.
-- Repositories that are still private show "code on request". When one goes public,
-  replace its `private-repo` mailto link with the GitHub URL.
 - Update measured outcomes only when the source repository's evidence changes.
 
 ## Publish with GitHub Pages
