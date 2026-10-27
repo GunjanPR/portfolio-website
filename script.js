@@ -106,6 +106,13 @@ copyEmailButton?.addEventListener("click", async () => {
   }
 });
 
+// Build details start open on wide screens and collapsed on phones.
+if (window.matchMedia("(min-width: 781px)").matches) {
+  document.querySelectorAll("[data-case-details]").forEach((details) => {
+    details.open = true;
+  });
+}
+
 if (year) year.textContent = new Date().getFullYear();
 updateThemeControl();
 refreshIcons();
